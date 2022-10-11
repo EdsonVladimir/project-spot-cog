@@ -1,0 +1,603 @@
+{
+	"info": {
+		"_postman_id": "6b8d3630-60d4-41c5-b926-68efc4fe5629",
+		"name": "Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Crear usuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"par_usuario\":\"Marta\", \n    \"par_contrasenia\":\"12345\", \n    \"par_correo\":\"marta@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/usuario/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"par_usuario\":\"Carlos\", \n    \"par_correo\":\"carlos@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/usuario/633666c52d8237e49746f1d8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario",
+								"633666c52d8237e49746f1d8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRVNPU0EiLCJjb3JyZW8iOiJlc29zYUBnbWFpbC5jb20iLCJpYXQiOjE2NjQ1ODYxNzEsImV4cCI6MTY2NDg0NTM3MX0.MEvohghr-yM7rhiZz-7Mz3lDfHqo3LQX3_lNSRkT92M",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/usuario/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar imagen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/home/edson/Documentos/Proyectos/Cognos/spotify/backend/public/imagenes/avatar.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/imagen/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"imagen",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Albun",
+			"item": [
+				{
+					"name": "Crear albun",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRVNPU0EiLCJjb3JyZW8iOiJlc29zYUBnbWFpbC5jb20iLCJpYXQiOjE2NjUxODgzOTUsImV4cCI6MTY2NTQ0NzU5NX0.kywckf-NC6NRZm6oeQHnLJk9bcb-kSN9Ytp51qVtDaE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\":\"Triller\", \n    \"descripcion\":\"Thriller es el sexto álbum de estudio del artista estadounidense Michael Jackson\", \n    \"idArtista\":\"6340c3d0a5f7fdd5b96abb4e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/albun",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"albun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener albun",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener albun",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/usuario/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar albun",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"par_usuario\":\"Carlos\", \n    \"par_correo\":\"carlos@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/albun/633666c52d8237e49746f1d8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"albun",
+								"633666c52d8237e49746f1d8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar albun",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRVNPU0EiLCJjb3JyZW8iOiJlc29zYUBnbWFpbC5jb20iLCJpYXQiOjE2NjQ1ODYxNzEsImV4cCI6MTY2NDg0NTM3MX0.MEvohghr-yM7rhiZz-7Mz3lDfHqo3LQX3_lNSRkT92M",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/usuario/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar albun",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/home/edson/Documentos/Proyectos/Cognos/spotify/backend/public/imagenes/avatar.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/albun/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"albun",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cancion",
+			"item": [
+				{
+					"name": "Crear albun",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRVNPU0EiLCJjb3JyZW8iOiJlc29zYUBnbWFpbC5jb20iLCJpYXQiOjE2NjUxODgzOTUsImV4cCI6MTY2NTQ0NzU5NX0.kywckf-NC6NRZm6oeQHnLJk9bcb-kSN9Ytp51qVtDaE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\":\"Beat It\", \n    \"descripcion\":\"es una canción escrita e interpretada por el artista estadounidense Michael Jackson\", \n    \"idAlbun\":\"6340c47ac6f39b3bae570efa\",\n    \"idArtista\":\"6340c3d0a5f7fdd5b96abb4e\",\n    \"genero\":\"Pop\",\n    \"autor\":\"Michael jackson\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/albun",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"albun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener albun",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener albun",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/usuario/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar albun",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"par_usuario\":\"Carlos\", \n    \"par_correo\":\"carlos@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/albun/633666c52d8237e49746f1d8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"albun",
+								"633666c52d8237e49746f1d8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar albun",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRVNPU0EiLCJjb3JyZW8iOiJlc29zYUBnbWFpbC5jb20iLCJpYXQiOjE2NjQ1ODYxNzEsImV4cCI6MTY2NDg0NTM3MX0.MEvohghr-yM7rhiZz-7Mz3lDfHqo3LQX3_lNSRkT92M",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/usuario/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar albun",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/home/edson/Documentos/Proyectos/Cognos/spotify/backend/public/imagenes/avatar.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/albun/633666d82d8237e49746f1da",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"albun",
+								"633666d82d8237e49746f1da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"par_usuario\":\"ESOSA\",\n    \"par_contrasenia\":\"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Artistas",
+			"item": [
+				{
+					"name": "Crear Artista",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombres\":\"Michael Joseph Jackson\",\n    \"nombre_artistico\":\"Michael Jackson\",\n    \"descripcion\":\"Este albun fue publicado el 30 de nobiembre de 1982\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/artista",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"artista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombres\":\"Mario Bros\",\n    \"nombre_artistico\":\"Marioooo\",\n    \"descripcion\":\"Cantante de musica con antiguedad de 15 años\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/artista/633b909b2251ca151ef15ce7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"artista",
+								"633b909b2251ca151ef15ce7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

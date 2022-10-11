@@ -5,7 +5,7 @@ const crearUsuario= async (req, res) =>{
 const {par_usuario, par_contrasenia, par_correo} = req.body;
 
 const usuario = new Usuario({
-    usudsadsadario:par_usuario,
+    usuario:par_usuario,
     contrasenia: bcrypt.hashSync(par_contrasenia, 10),
     correo:par_correo
 })
