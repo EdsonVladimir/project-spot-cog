@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.alto {
+  height: 100vh;
+}
+.cuerpo-form{
+  border: 2px solid #282828;
+  border-radius: 25px;
+  padding: 20px;
+  margin: auto;
+  margin-top:200px;
+  width: 550px;
+  box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.2);
+}

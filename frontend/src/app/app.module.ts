@@ -7,26 +7,40 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 // Componentes del proyecto
 import { RegistroComponent } from './Components/registro/registro.component';
-
+import { LoginComponent } from './Components/login/login.component';
+import { SpotifyComponent } from './Components/spotify/spotify.component';
+import { NavbarComponent } from './Components/spotify/navbar/navbar.component';
+import { SidebarComponent } from './Components/spotify/sidebar/sidebar.component';
+import { InicioComponent } from './Components/spotify/inicio/inicio.component';
 
 // Librerias de PrimeNg
 import {ChipsModule} from 'primeng/chips';
 import {ButtonModule} from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
-
+import {PanelMenuModule} from 'primeng/panelmenu';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistroComponent
+    RegistroComponent,
+    LoginComponent,
+    SpotifyComponent,
+    NavbarComponent,
+    SidebarComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     ChipsModule,
     ButtonModule,
-    HttpClientModule
+    ToastModule,
+    PanelMenuModule
 
   ],
   providers: [],

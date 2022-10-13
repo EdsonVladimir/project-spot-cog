@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="cuerpo-form">
+        <h5 class="text-center">Iniciar cession</h5>
+        <div class="grid p-fluid">
+          <form  #f="ngForm" (ngSubmit)="iniciarCesion()">
+            <div class="col-12 md:col-4 my-3">
+              <label>Ingrese Usuario</label>
+              <div class="p-inputgroup">
+
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" pInputText name="par_usuario" placeholder="ingrese usuario" [(ngModel)]="usuario.par_usuario">
+              </div>
+            </div>
+            <div class="col-12 md:col-4 my-3">
+              <label>Ingrese contraseña</label>
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="password" pInputText name="par_contrasenia" placeholder="contraseña"[(ngModel)]="usuario.par_contrasenia">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <button pButton type="submit" label="Ingresar" class="p-button-success" ></button>
+              </div>
+              <div class="col-6">
+                <button pButton type="button" label="Registrate!!" class="p-button-info" (click)="resgitrate()"></button>
+              </div>
+            </div>
+          </form>
+        </div></div>
+    </div>
+  </div>
+</div>
+<p-toast  position="top-right" [baseZIndex]="5000"></p-toast>

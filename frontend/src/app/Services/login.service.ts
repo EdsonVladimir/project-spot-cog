@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {map} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService {
+export class LoginService {
   constructor(public http:HttpClient) { }
-
-  registrarUsuario(usuario:any){
-    return this.http.post(`${environment.urlGlobal}usuario`, usuario).pipe(map(data=>{
+  iniciarCesion(usuario:any){
+    return this.http.post(`${environment.urlGlobal}login`, usuario).pipe(map(data=>{
       return data;
     }))
   }

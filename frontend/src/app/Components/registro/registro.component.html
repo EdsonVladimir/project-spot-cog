@@ -1,37 +1,43 @@
 <div class="container">
   <div class="row">
    <div class="col-12">
-     <h5>Registro de Usuario</h5>
-     <div class="grid p-fluid">
-       <form  #f="ngForm" (ngSubmit)="registrar()">
-       <div class="col-12 md:col-4">
-         <div class="p-inputgroup">
-           <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-           <input type="mail" pInputText name="par_correo" placeholder="Correo electronico" [(ngModel)]="usuario.par_correo">
-         </div>
-       </div>
-       <div class="col-12 md:col-4">
-         <div class="p-inputgroup">
-           <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-           <input type="text" pInputText name="par_usuario" placeholder="Como debemos llamarte" [(ngModel)]="usuario.par_usuario">
-         </div>
-       </div>
-       <div class="col-12 md:col-4">
-         <div class="p-inputgroup">
-           <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-           <input type="password" pInputText name="par_contrasenia" placeholder="contraseña"[(ngModel)]="usuario.par_contrasenia">
-         </div>
-       </div>
-       <div class="row">
-         <div class="col-6">
-           <button pButton type="button" label="Cancelar" class="p-button-warning"></button>
-         </div>
-         <div class="col-6">
-           <button pButton type="submit" label="Registrar" class="p-button-success"></button>
-         </div>
-       </div>
-       </form>
+       <div class="cuerpo-form">
+       <h5 class="text-center">Registro de Usuario</h5>
+       <div class="grid p-fluid">
+         <form  #f="ngForm" (ngSubmit)="registrar()">
+           <div class="col-12 md:col-4 my-3">
+             <label>Ingrese su correo</label>
+             <div class="p-inputgroup">
+               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+               <input type="mail" pInputText name="par_correo" placeholder="Correo electronico" [(ngModel)]="usuario.par_correo">
+             </div>
+           </div>
+           <div class="col-12 md:col-4 my-3">
+             <label>Como deberiamos llamarte</label>
+             <div class="p-inputgroup">
+
+               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+               <input type="text" pInputText name="par_usuario" placeholder="Como debemos llamarte" [(ngModel)]="usuario.par_usuario">
+             </div>
+           </div>
+           <div class="col-12 md:col-4 my-3">
+             <label>Registre sus contraseña</label>
+             <div class="p-inputgroup">
+               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+               <input type="password" pInputText name="par_contrasenia" placeholder="contraseña"[(ngModel)]="usuario.par_contrasenia">
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-6">
+               <button pButton type="button" label="Atras" class="p-button-warning" [routerLink]="['login']"></button>
+             </div>
+             <div class="col-6">
+               <button pButton type="submit" label="Registrar" class="p-button-success"></button>
+             </div>
+           </div>
+         </form>
+       </div></div>
    </div>
-  </div>
  </div>
 </div>
+<p-toast  position="top-right" [baseZIndex]="5000"></p-toast>
