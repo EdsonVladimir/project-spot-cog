@@ -25,7 +25,7 @@ const obtenerCanciones = async (req, res) =>{
         res.json({
             estado:1,
             mensaje:'Obteniendo Cancions',
-            constenido:respuesta
+            contenido:respuesta
         })
     } catch (err) {
         res.status(500).json({

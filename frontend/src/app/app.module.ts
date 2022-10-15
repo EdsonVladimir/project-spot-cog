@@ -11,7 +11,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { SpotifyComponent } from './Components/spotify/spotify.component';
 import { NavbarComponent } from './Components/spotify/navbar/navbar.component';
 import { SidebarComponent } from './Components/spotify/sidebar/sidebar.component';
-import { InicioComponent } from './Components/spotify/inicio/inicio.component';
+import { InicioComponent } from './Components/spotify/componentes-spotify/inicio/inicio.component';
 
 // Librerias de PrimeNg
 import {ChipsModule} from 'primeng/chips';
@@ -20,6 +20,7 @@ import {ToastModule} from 'primeng/toast';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import {PanelMenuModule} from 'primeng/panelmenu';
+import { BuscadorComponent } from './Components/spotify/componentes-spotify/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     SpotifyComponent,
     NavbarComponent,
     SidebarComponent,
-    InicioComponent
+    InicioComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

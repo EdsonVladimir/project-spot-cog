@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 m-3">
+      <div class="col-12 text-center">
+        <h2>Inicio</h2>
+      </div>
+      <div class="col-12 m-2">
+        <div class="row row-cols-1 row-cols-md-6 g-4">
+          <div class="col" *ngFor="let item of canciones">
+            <div class="card h-100">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{item['titulo']}}</h5>
+                <p class="card-text">{{item['descripcion']}}</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Artista {{item['autor']}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
