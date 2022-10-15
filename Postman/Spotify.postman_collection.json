@@ -172,13 +172,13 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRVNPU0EiLCJjb3JyZW8iOiJlc29zYUBnbWFpbC5jb20iLCJpYXQiOjE2NjUxODgzOTUsImV4cCI6MTY2NTQ0NzU5NX0.kywckf-NC6NRZm6oeQHnLJk9bcb-kSN9Ytp51qVtDaE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRURTT04iLCJjb3JyZW8iOiJlZHNvbkBnbWFpbC5jb20iLCJpYXQiOjE2NjU3OTIxOTksImV4cCI6MTY2NjA1MTM5OX0.LGQdRI39igpNUfL5ruhYo3AAWj042N7Y9_uHRbAC_6Y",
 								"type": "default"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"titulo\":\"Triller\", \n    \"descripcion\":\"Thriller es el sexto álbum de estudio del artista estadounidense Michael Jackson\", \n    \"idArtista\":\"6340c3d0a5f7fdd5b96abb4e\"\n}",
+							"raw": "{\n    \"titulo\":\"Triller\", \n    \"descripcion\":\"Thriller es el sexto álbum de estudio del artista estadounidense Michael Jackson\", \n    \"idArtista\":\"6349ff833c5af49c5459197e\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -203,16 +203,22 @@
 					"name": "Obtener albun",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRURTT04iLCJjb3JyZW8iOiJlZHNvbkBnbWFpbC5jb20iLCJpYXQiOjE2NjU3OTIxOTksImV4cCI6MTY2NjA1MTM5OX0.LGQdRI39igpNUfL5ruhYo3AAWj042N7Y9_uHRbAC_6Y",
+								"type": "default"
+							}
+						],
 						"url": {
-							"raw": "localhost:3000/api/usuario",
+							"raw": "localhost:3000/api/albun",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"usuario"
+								"albun"
 							]
 						}
 					},
@@ -222,17 +228,23 @@
 					"name": "Obtener albun",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiRVNPU0EiLCJjb3JyZW8iOiJlc29zYUBnbWFpbC5jb20iLCJpYXQiOjE2NjUxODgzOTUsImV4cCI6MTY2NTQ0NzU5NX0.kywckf-NC6NRZm6oeQHnLJk9bcb-kSN9Ytp51qVtDaE",
+								"type": "default"
+							}
+						],
 						"url": {
-							"raw": "localhost:3000/api/usuario/633666d82d8237e49746f1da",
+							"raw": "localhost:3000/api/cancion/6340c47ac6f39b3bae570efa",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"usuario",
-								"633666d82d8237e49746f1da"
+								"cancion",
+								"6340c47ac6f39b3bae570efa"
 							]
 						}
 					},
@@ -329,7 +341,7 @@
 			"name": "Cancion",
 			"item": [
 				{
-					"name": "Crear albun",
+					"name": "Crear cancion",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -341,7 +353,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"titulo\":\"Beat It\", \n    \"descripcion\":\"es una canción escrita e interpretada por el artista estadounidense Michael Jackson\", \n    \"idAlbun\":\"6340c47ac6f39b3bae570efa\",\n    \"idArtista\":\"6340c3d0a5f7fdd5b96abb4e\",\n    \"genero\":\"Pop\",\n    \"autor\":\"Michael jackson\"\n\n}",
+							"raw": "{\n    \"titulo\":\"Beat It\", \n    \"descripcion\":\"es una canción escrita e interpretada por el artista estadounidense Michael Jackson\", \n    \"idAlbun\":\"634a00123c5af49c54591982\",\n    \"idArtista\":\"6349ff833c5af49c5459197e\",\n    \"genero\":\"Pop\",\n    \"autor\":\"Michael jackson\"\n\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -349,21 +361,21 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/albun",
+							"raw": "localhost:3000/api/cancion",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"albun"
+								"cancion"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Obtener albun",
+					"name": "Obtener cancion",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -382,7 +394,7 @@
 					"response": []
 				},
 				{
-					"name": "Obtener albun",
+					"name": "Obtener cancion",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -402,7 +414,7 @@
 					"response": []
 				},
 				{
-					"name": "Actualizar albun",
+					"name": "Actualizar cancion",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -431,7 +443,7 @@
 					"response": []
 				},
 				{
-					"name": "Eliminar albun",
+					"name": "Eliminar cancion",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -457,7 +469,7 @@
 					"response": []
 				},
 				{
-					"name": "Actualizar albun",
+					"name": "Actualizar cancion",
 					"request": {
 						"method": "POST",
 						"header": [],
